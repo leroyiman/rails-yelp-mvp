@@ -1,0 +1,32 @@
+<h1>YOUR RESTAURANTS NEAR BY!</h1>
+<%# <%= link_to show_restaurant_path(@restaurant) %>
+  <%# <% @restaurants.each do |restaurant| %>
+        <div class="card-trip">
+          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+          <div class="card-trip-infos">
+            <div>
+              <h2><%= @restaurant.name%></h2>
+              <p><%= @restaurant.address%> | +49<%= @restaurant.phone%></p>
+            </div>
+              <h2 class="card-trip-pricing"><%= @restaurant.category%></h2>
+            <%# <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> %>
+          </div>
+        </div>
+
+  <%# <% end %>
+<div class="nebeneinander">
+  <% @reviews.each do |review| %>
+    <ul>
+      <li>
+        <div class="card-product">
+            <h2><%= review.content %></h2>
+              <ul class= "nebeneinander">
+                <% review.rating.times do%>
+                    <li><i class="fa-solid fa-star"></i></li>
+                <% end %>
+              </ul>
+        </div>
+      </li>
+    </ul>
+  <% end %>
+</div>

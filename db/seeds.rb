@@ -5,11 +5,12 @@
 # Restaurant.destroy_all
 # Review.destroy_all
 
-5.times do
-  restaurants = Restaurant.create( name: Faker::Restaurant.name ,  address: Faker::Address.street_name, category: "Italian", phone: Faker::PhoneNumber.cell_phone)
+15.times do
+  restaurants = Restaurant.create( name: Faker::Restaurant.name ,  address: Faker::Address.street_name, category: ["Italian", "Chinese", "Japenese", "French", "Belgian"].shuffle.first, phone: Faker::PhoneNumber.cell_phone)
   3.times do
-    reviews = Review.new(content: Faker::Beer.name, rating: rand(1..5))
-    reviews.restaurant = restaurants
+    reviews = Review.create( content: Faker::Beer.name, rating: rand(1..5), restaurant: restaurants)
+    # reviews.restaurant = restaurants
+    # reviews.save
   end
 end
 

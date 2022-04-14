@@ -2,6 +2,7 @@
 <ul style="list-style:none;">
 <div class="cards">
   <% @restaurants.each do |restaurant| %>
+  <%= link_to restaurant_path(restaurant) do %>
     <li><div class="card-trip">
           <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
             <div class="card-trip-infos">
@@ -14,6 +15,7 @@
         </div>
       </div>
     </li>
+    <% end %>
   <% end %>
 </div>
 </ul>

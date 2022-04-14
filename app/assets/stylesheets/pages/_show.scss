@@ -1,0 +1,32 @@
+.card-product{
+  margin-top: 20px;
+   background-color: white;
+   border-radius: 5px;
+   padding: 20px 20px 0 10px;
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+.card-product > ul {
+  list-style-type: none;
+}
+
+.card-product > li {
+  list-style-type: none;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+}
+
+.nebeneinander{
+  display: flex;
+  justify-content: space-between;
+}
